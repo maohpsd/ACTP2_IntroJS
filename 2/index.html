@@ -12,8 +12,45 @@ de un segundo, al volver hacer click debe volver a estar en blanco y negro.
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style>
+
+    	img{
+
+    		filter: grayscale(100%);
+    	}
+
+    	.saturacion {
+
+		    filter: none;
+		    cursor: pointer;
+		    transition: 1s;
+
+    	}
+
+    </style>
   </head>
   <body>
-
+  <div class="fotos">
+  	<img src="https://picsum.photos/300/300?image=0">
+  	<img src="https://picsum.photos/300/300?image=0">
+  	<img src="https://picsum.photos/300/300?image=0">
+  	<img src="https://picsum.photos/300/300?image=0">
+  	<img src="https://picsum.photos/300/300?image=0">
+  </div>
   </body>
+
+  <script>
+
+  	$(function() {
+
+  		//cuando el DOM esta cargado, el codigo se ejecuta
+  		$("img").click(function() {
+            $(".saturacion").not(this).removeClass("saturacion");
+			$(this).toggleClass("saturacion");
+
+ 		});
+  	});
+
+  </script>
 </html>

@@ -10,8 +10,31 @@ Tip: Investigar el evento window.onload
   <head>
     <meta charset="utf-8">
     <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   </head>
   <body>
+
+  	<img class="featured" src="https://picsum.photos/300/300?image=0">
+  	<img class="featured" src="https://picsum.photos/300/300?image=0">
+  	<img class="featured" src="https://picsum.photos/300/300?image=0">
+  	<img class="featured" src="https://picsum.photos/300/300?image=0">
+
+	<script>
+
+		$(function() {
+           
+           alert("antes de cargar");
+
+		});
+
+		window.onload = function () {
+
+			alert("cargaron las imagenes");
+		}
+
+		
+	</script>
+
 
   </body>
 </html>
